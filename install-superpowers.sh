@@ -15,34 +15,22 @@ set -e
 REPO_URL="https://github.com/obra/superpowers"
 CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/superpowers"
 GEMINI_ROOT="$HOME/.gemini" # Base for global Gemini CLI config
-COMMANDS_DIR="$GEMINI_ROOT/commands" # Commands are currently always global
 
 # Default to workspace-local installation
 INSTALL_GLOBAL=false
 WORKSPACE_ROOT="$(pwd)" # Current working directory is the workspace root
 
-# Parse arguments
-for arg in "$@"; do
-    case "$arg" in
-        --user)
-            INSTALL_GLOBAL=true
-            ;;
-        *)
-            echo "Unknown argument: $arg"
-            exit 1
-            ;;
-    esac
-done
-
 if [ "$INSTALL_GLOBAL" = true ]; then
     GEMINI_MD_INSTALL_PATH="$GEMINI_ROOT/GEMINI.md"
     GEMINI_SKILLS_BASE_DIR="$GEMINI_ROOT/.superpowers/skills"
+    COMMANDS_DIR="$GEMINI_ROOT/commands" # Commands are currently always global
     echo "🌍 Installing superpowers globally to $HOME..."
 else
     # Workspace-local installation
     mkdir -p "$WORKSPACE_ROOT/.gemini" # Ensure .gemini exists in workspace
     GEMINI_MD_INSTALL_PATH="$WORKSPACE_ROOT/.gemini/GEMINI.md"
     GEMINI_SKILLS_BASE_DIR="$WORKSPACE_ROOT/.gemini/.superpowers/skills"
+    COMMANDS_DIR="$WORKSPACE_ROOT/.gemini/commands" # Local commands directory
     echo "📁 Installing superpowers workspace-locally to $WORKSPACE_ROOT..."
 fi
 
