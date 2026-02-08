@@ -1,10 +1,10 @@
 # Superpowers Skills Reference
 
-Complete reference for all 14 Superpowers skills available as VS Code slash commands.
+Complete reference for all 14 Superpowers skills available as Gemini CLI slash commands.
 
 ## Overview
 
-Superpowers provides a complete software development workflow through composable "skills" that enforce best practices. Each skill is available as a slash command in GitHub Copilot Chat, providing structured guidance for specific development tasks.
+Superpowers provides a complete software development workflow through composable "skills" that enforce best practices. Each skill is available as a slash command in Gemini CLI, providing structured guidance for specific development tasks.
 
 All skills follow core principles:
 - **Test-Driven Development** - Write tests first, always
@@ -270,32 +270,26 @@ All skills follow core principles:
 
 ## Command Mapping
 
-Some skills use different names in VS Code to avoid conflicts with reserved commands.
+Some skills use different names to align with Gemini CLI conventions.
 
-| Original Skill | VS Code Command | Reason for Rename |
-|----------------|-----------------|-------------------|
-| writing-plans | `/write-plan` | Avoids VS Code's built-in `/plan` command |
-| systematic-debugging | `/investigate` | Avoids VS Code's built-in `/fix` command |
-| test-driven-development | `/tdd` | Brevity (shorter is better for frequent use) |
-| subagent-driven-development | `/subagent-dev` | Brevity |
-| dispatching-parallel-agents | `/dispatch-agents` | Brevity |
-| finishing-a-development-branch | `/finish-branch` | Brevity |
-| verification-before-completion | `/verify` | Brevity |
-| using-git-worktrees | `/worktree` | Brevity |
-| requesting-code-review | `/review` | Brevity |
-| receiving-code-review | `/receive-review` | Brevity |
-| executing-plans | `/execute-plan` | Consistency with singular form |
-| writing-skills | `/write-skill` | Consistency with singular form |
-| brainstorming | `/brainstorm` | Direct mapping (no conflict) |
-| using-superpowers | `/superpowers` | Direct mapping (no conflict) |
+| Original Skill | Gemini Command |
+|----------------|----------------|
+| writing-plans | `/plan` |
+| executing-plans | `/execute` |
+| brainstorming | `/brainstorm` |
+| test-driven-development | `/tdd` |
+| systematic-debugging | `/investigate` |
+| verification-before-completion | `/verify` |
+| using-git-worktrees | `/worktree` |
+| finishing-a-development-branch | `/finish` |
+| requesting-code-review | `/review` |
+| receiving-code-review | `/receive` |
+| subagent-driven-development | `/subagent` |
+| dispatching-parallel-agents | `/dispatch` |
+| writing-skills | `/newskill` |
+| using-superpowers | `/superpowers` |
 
-### Why Rename Commands?
 
-**Conflict Avoidance:** VS Code reserves certain slash commands (`/plan`, `/fix`, `/explain`, etc.). Using these names would create confusion and prevent our skills from being invoked. The Superpowers installer automatically maps to conflict-free names.
-
-**Brevity:** Shorter commands are faster to type and easier to remember. Since these skills are used frequently throughout development, concise names improve workflow efficiency.
-
-**Consistency:** All commands follow a consistent pattern (verb or verb-noun), making the command set more predictable and easier to learn.
 
 ---
 
@@ -303,19 +297,19 @@ Some skills use different names in VS Code to avoid conflicts with reserved comm
 
 ### Simple Feature Development
 1. `/brainstorm` - Refine idea
-2. `/write-plan` - Create implementation plan
+2. `/plan` - Create implementation plan
 3. `/tdd` - Implement with tests
 4. `/review` - Self-review
 5. `/verify` - Confirm it works
 
 ### Complex Multi-Task Project
 1. `/brainstorm` - Explore solution space
-2. `/write-plan` - Comprehensive plan
+2. `/plan` - Comprehensive plan
 3. `/worktree` - Isolated workspace
-4. `/execute-plan` - Implement with checkpoints
+4. `/execute` - Implement with checkpoints
 5. `/review` - Check quality
-6. `/verify` - Run full test suite
-7. `/finish-branch` - Merge or PR
+
+7. `/finish` - Merge or PR
 
 ### Debugging Session
 1. `/investigate` - Systematic root cause analysis
@@ -325,14 +319,14 @@ Some skills use different names in VS Code to avoid conflicts with reserved comm
 5. `/review` - Check for similar issues
 
 ### Parallel Development
-1. `/write-plan` - Overall architecture
-2. `/dispatch-agents` - Parallel implementation
+1. `/plan` - Overall architecture
+2. `/dispatch` - Parallel implementation
 3. `/review` - Check each component
 4. `/verify` - Integration testing
-5. `/finish-branch` - Merge all work
+5. `/finish` - Merge all work
 
 ### Creating New Skills
-1. `/write-skill` - Develop new skill
+1. `/newskill` - Develop new skill
 2. `/tdd` - Test with scenarios
 3. `/verify` - Validate effectiveness
 4. `/review` - Ensure quality
@@ -342,7 +336,7 @@ Some skills use different names in VS Code to avoid conflicts with reserved comm
 ## Tips & Best Practices
 
 ### Always Start With Planning
-Never jump into coding without a plan. Use `/brainstorm` for exploration, then `/write-plan` for structure.
+Never jump into coding without a plan. Use `/brainstorm` for exploration, then `/plan` for structure.
 
 ### TDD Is Non-Negotiable
 Use `/tdd` for all implementation work. No exceptions. Tests are not "nice to have"—they're required.
@@ -357,13 +351,13 @@ Use `/verify` after every fix or feature. Evidence beats assumptions.
 Start new work with `/worktree` to keep experiments separate from stable code.
 
 ### Leverage Subagents for Complex Plans
-For plans with 10+ tasks, use `/subagent-dev` to maintain fresh perspective per task.
+For plans with 10+ tasks, use `/subagent` to maintain fresh perspective per task.
 
 ### Debug Systematically
 When things break, resist ad-hoc fixes. Use `/investigate` to find root cause and implement proper solution.
 
 ### Finish What You Start
-Use `/finish-branch` to properly close out work. Don't leave orphaned branches.
+Use `/finish` to properly close out work. Don't leave orphaned branches.
 
 ---
 
@@ -378,6 +372,6 @@ Use `/finish-branch` to properly close out work. Don't leave orphaned branches.
 
 ## Version Information
 
-This reference documents the 14 core skills from Superpowers v1.x as implemented for VS Code.
+This reference documents the 14 core skills from Superpowers v1.x as implemented for Gemini CLI.
 
 Last updated: February 8, 2026
