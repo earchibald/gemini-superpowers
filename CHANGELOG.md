@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5 - 2026-02-08
+
+### Fixed
+- Corrected `scripts/verify-installation.sh` to remove irrelevant checks for `copilot-instructions.md` and `.github/prompts/` files, ensuring accurate validation for `gemini-superpowers` installation.
+
 ## 0.1.4 - 2026-02-08
 
 ### Fixed
