@@ -3,3 +3,7 @@ node_modules
 .idea
 .vscode
 .worktrees
+__pycache__
+.gemini
+.superpowers
+INSTALLATION_REPORT.md
