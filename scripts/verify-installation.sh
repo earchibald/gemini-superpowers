@@ -20,9 +20,9 @@ echo "✓ Instructions file found"
 
 # Check all 14 prompts exist
 EXPECTED_PROMPTS=(
-    "brainstorm" "write-plan" "execute-plan" "tdd" "investigate" "verify" 
-    "worktree" "finish-branch" "review" "receive-review" "subagent-dev" 
-    "dispatch-agents" "write-skill" "superpowers"
+    "brainstorm" "plan" "execute" "tdd" "investigate" "verify"
+    "worktree" "finish" "review" "receive" "subagent"
+    "dispatch" "newskill" "superpowers"
 )
 
 MISSING_COUNT=0
@@ -41,7 +41,7 @@ else
 fi
 
 # Verify frontmatter in a sample file
-if ! grep -q "^name: write-plan$" .github/prompts/write-plan.prompt.md; then
+if ! grep -q "^name: plan$" .github/prompts/plan.prompt.md; then
     echo "❌ Frontmatter validation failed"
     exit 1
 fi
@@ -49,4 +49,4 @@ echo "✓ Frontmatter format valid"
 
 echo ""
 echo "✅ Installation verified successfully!"
-echo "📢 Reload VS Code (Developer: Reload Window) to activate."
+echo "📢 Restart your terminal session or Gemini CLI client to activate."
