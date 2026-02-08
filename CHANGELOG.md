@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4 - 2026-02-08
+
+### Fixed
+- Refined "How Installation Works" section in `README.md` for better clarity and alignment with `vsc-superpowers` style.
+
 ## 0.1.3 - 2026-02-08
 
 ### Fixed
