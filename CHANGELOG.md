@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3 - 2026-02-08
+
+### Fixed
+- Corrected `README.md` Installation section to provide user instructions instead of the full script body.
+
 ## 0.1.2 - 2026-02-08
 
 ### Changed
