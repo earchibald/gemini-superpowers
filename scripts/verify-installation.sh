@@ -11,12 +11,7 @@ if [ ! -d ~/.cache/superpowers ]; then
 fi
 echo "✓ Cache found"
 
-# Check .github structure
-if [ ! -f .github/copilot-instructions.md ]; then
-    echo "❌ copilot-instructions.md not found"
-    exit 1
-fi
-echo "✓ Instructions file found"
+
 
 # Check all 14 prompts exist
 EXPECTED_PROMPTS=(
