@@ -41,24 +41,13 @@ gemini
 
 ### How Installation Works
 
-The installer integrates Superpowers into your Gemini CLI environment by:
+The `install-superpowers.sh` script sets up your Gemini CLI environment by:
 
-1.  **Global Cache**: Clones Superpowers to `~/.cache/superpowers` (shared across workspaces).
-2.  **Command Generation**: Generates native Gemini CLI slash commands (`.toml` files) that point to the cached skills.
-3.  **Protocol Injection**: Injects the "Loop of Autonomy" protocol into your `~/.gemini/GEMINI.md` to guide Gemini CLI's behavior.
+1.  **Global Cache**: Clones the core Superpowers framework to a shared cache directory (`~/.cache/superpowers`), centralizing skill definitions for efficiency across all Gemini CLI instances.
+2.  **Native Commands**: Generates `.toml` slash commands directly within your `~/.gemini/commands/` directory. These commands provide seamless, native access to the cached Superpowers skills.
+3.  **Autonomous Protocol**: Injects the "Loop of Autonomy" protocol into your `~/.gemini/GEMINI.md` file. This crucial step guides Gemini CLI's behavior to strictly follow the Superpowers workflow and best practices.
 
-**Result:** Gemini CLI gains Superpowers functionality through a centralized cache and native command integration.
-```
-
-### How Installation Works
-
-The installer uses a **Superpowers framework integration approach**:
-
-1.  **Global Cache**: Clones Superpowers to `~/.cache/superpowers` (shared across workspaces).
-2.  **Command Generation**: Generates native Gemini CLI slash commands (`.toml` files) that point to the cached skills.
-3.  **Protocol Injection**: Injects the "Loop of Autonomy" protocol into your `~/.gemini/GEMINI.md` to guide Gemini CLI's behavior.
-
-**Result:** Gemini CLI gains Superpowers functionality through a centralized cache and native command integration.
+**Result:** Your Gemini CLI is transformed into an autonomous coding agent, leveraging Superpowers' structured workflows through deep native integration.
 
 ### Backup & Recovery
 
