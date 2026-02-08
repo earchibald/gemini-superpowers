@@ -23,4 +23,15 @@ Refer to the main `README.md` for installation instructions. Once installed, exp
 
 ## Cost Model (Gemini Specific)
 
-(This section will be expanded upon in a later task after investigation)
+Understanding the cost implications of using Gemini Superpowers is crucial. Gemini's pricing is primarily based on token usage for both input (prompts) and output (responses). The Superpowers framework, with its emphasis on structured prompts, iterative development, and subagent delegation, can influence your Gemini API costs in several ways:
+
+- **Structured Prompting:** While Superpowers encourages more detailed and structured prompts (e.g., comprehensive plans, detailed TDD steps), this can lead to higher input token counts per interaction. However, these structured prompts aim to reduce the need for multiple clarifying interactions, potentially leading to a more efficient overall process.
+- **Iterative Development:** The Red-Green-Refactor cycle and systematic debugging often involve several turns of small, focused interactions. Each turn consumes tokens. The efficiency gained from a structured approach can offset the token cost of multiple turns by reducing overall time to resolution and minimizing irrelevant responses.
+- **Subagent Usage:** When subagents are dispatched, they operate within their own context, which can increase the total token usage across multiple concurrent or sequential tasks. Monitoring subagent interactions will be important for cost management.
+
+**Recommendations for Cost Optimization:**
+- **Be Concise:** While structuring prompts, aim for clarity and conciseness to avoid unnecessary token consumption.
+- **Leverage Context:** The Superpowers protocol encourages maintaining context through `plan.md` and `scratchpad.md`, which can help reduce redundant information in prompts.
+- **Monitor Usage:** Regularly review your Gemini API usage to understand cost patterns and identify areas for optimization.
+
+By promoting efficient workflows and focused interactions, Gemini Superpowers aims to provide significant value, but users should be mindful of token usage, especially with complex tasks and extensive subagent use.
