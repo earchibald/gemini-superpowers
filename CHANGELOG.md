@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 - 2026-02-08
+
+### Changed
+- Pushed outstanding commits to remote repository, including README refactoring, file parity changes, and `.gitignore` updates.
+- Ensured consistency between local and remote for `v0.1.1` release.
+
 ## 0.1.1 - 2026-02-08
 
 ### Changed
