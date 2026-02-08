@@ -14,6 +14,16 @@ set -e
 # 3. Injects the "Loop of Autonomy" protocol into ~/.gemini/GEMINI.md
 # ==============================================================================
 
+## Documentation
+
+For a comprehensive overview, detailed command references, and insights into the Gemini-specific cost model, please refer to our [full documentation](./docs/README.md).
+
+You can also find a quick reference for all available slash commands in the [Cheatsheet](./docs/CHEATSHEET.md).
+
+## Release 0.1.0
+
+This marks the initial public release of Gemini Superpowers, bringing the powerful Superpowers framework to Google Gemini CLI. We aim to empower developers with an efficient, structured, and autonomous agent workflow.
+
 # --- Configuration ---
 REPO_URL="https://github.com/obra/superpowers"
 CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/superpowers"
