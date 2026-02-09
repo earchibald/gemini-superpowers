@@ -28,15 +28,23 @@ The Superpowers approach transforms how we think about code quality, testing, an
 ## Installation
 
 ```bash
+curl -fsSL https://raw.githubusercontent.com/earchibald/gemini-superpowers/main/install-superpowers.sh | bash
+```
+
+Then start Gemini CLI:
+```bash
+gemini
+```
+
+### Alternative: Manual Installation
+
+```bash
 # Clone this repository
 git clone https://github.com/earchibald/gemini-superpowers.git
 cd gemini-superpowers
 
 # Run the installer
 ./install-superpowers.sh
-
-# Start Gemini CLI
-gemini
 ```
 
 ### How Installation Works
