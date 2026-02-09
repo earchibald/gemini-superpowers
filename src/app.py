@@ -19,5 +19,24 @@ users_db[dummy_user.username] = dummy_user
 def home():
     return "Welcome to the authentication API!"
 
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+
+    user = users_db.get(username)
+
+    if not user or not user.check_password(password):
+        return jsonify({'message': 'Invalid credentials'}), 401
+
+    token_payload = {
+        'username': user.username,
+        'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)
+    }
+    token = jwt.encode(token_payload, app.config['SECRET_KEY'], algorithm='HS256')
+
+    return jsonify({'access_token': token}), 200
+
 if __name__ == '__main__':
     app.run(debug=True)
