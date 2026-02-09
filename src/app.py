@@ -6,7 +6,7 @@ import datetime
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your_super_secret_key') # Consider loading from environment
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your_super_secret_key_that_is_at_least_32_bytes_long') # Consider loading from environment
 
 # In-memory user store for demonstration. Replace with a proper database in a real application.
 users_db = {}
@@ -32,7 +32,7 @@ def login():
 
     token_payload = {
         'username': user.username,
-        'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)
+        'exp': datetime.datetime.now(datetime.UTC) + datetime.timedelta(minutes=30)
     }
     token = jwt.encode(token_payload, app.config['SECRET_KEY'], algorithm='HS256')
 
